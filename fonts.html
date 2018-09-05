@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @font-face{
+        font-family: fnt;
+        src: url('https://rawgit.com/Mythius/fonts/master/VT323-Regular.ttf');
+      }
+      body{
+        font-family: fnt;
+        font-size: 50px;
+        color: green;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <input id=inp placeholder='type here'>
+    <p id=out>hello</p>
+    <script>
+      tick();
+      function tick(){
+        var a=document.getElementById('inp').value;
+        if(a.length == 0){
+          a='[type here]'
+        }
+        document.getElementById('out').innerHTML=a.toUpperCase();
+        requestAnimationFrame(tick);
+      }
+    </script>
+  </body>
+</html>
